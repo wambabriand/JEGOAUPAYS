@@ -4,6 +4,8 @@ import Home from '../components/home/Home';
 import User from '../components/user/User';
 import Admin from '../components/admin/admin';
 import PrivateRoutes from '../components/authentication/PrivateRoutes';
+//import bg from './bg.png';
+
 
 function RoutesConfig(){
     return(<div>

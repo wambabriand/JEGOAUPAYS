@@ -1,10 +1,10 @@
 import React from 'react';
-import { doPut } from '../../../services/api';
+import { doPutWithAuth } from '../../../services/api';
 import { useHistory } from 'react-router-dom';
 
 function Password(){
     
-    const [{data, loading, error}, executePut] =  doPut("/api/jego/lock/admin/put/password");
+    const [{data, loading, error}, executePut] =  doPutWithAuth("/api/jego/lock/admin/put/password");
 
     const history = useHistory();
 
@@ -22,7 +22,9 @@ function Password(){
             alert("La valeur du nouveau mot de passe doit etre la meme");
             return;
         }
-        executePut({data:{email:"dfdf@dfdf", pwd_old:pwd1, pwd_new:pwd2}});
+        executePut({data:{email:"dfdf@dfdf", pwd_old:pwd1, pwd_new:pwd2}})
+            .then()
+            .catch(err=>console.log(err));
     }
 
 

@@ -6,8 +6,8 @@ function FooterBar (){
 
 return (
 <div className='footer fixed-bottom'>
-  <div className='my-4'>
-  @copyright BriandWamba[@]yahoo[.]fr  
+  <div className='my-3'>
+  @copyright  Brunel
   </div>
 </div>);
 }

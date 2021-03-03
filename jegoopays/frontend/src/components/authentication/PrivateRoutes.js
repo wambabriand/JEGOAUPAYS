@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Login from '../Login';
-import { useAuthContext } from './AuthContext';
+//import { useAuthContext } from './AuthContext';
 
 const PrivateRoutes = ({component, ...options}) => {
     

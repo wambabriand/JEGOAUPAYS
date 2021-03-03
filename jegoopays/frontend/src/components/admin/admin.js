@@ -17,14 +17,14 @@ function Admin(){
     return(
     <div>
         <AdminNavBar> </AdminNavBar>
-            <Switch>
-                <Route path={`${path}/voyages`}> <VoyageList> </VoyageList>  </Route>
-                <Route path={`${path}/attenReservations`}> <ReservationList> </ReservationList></Route>
-                <Route path={`${path}/confirReservations`}> <ConfirmReservation></ConfirmReservation> </Route>
-                <Route path={`${path}/compte`}> <Compte> </Compte></Route>
-                <Route path={`${path}/createVoyage`}> <CreateVoyage></CreateVoyage></Route>
-                <Route path={`${path}/`}> <VoyageList></VoyageList>  </Route>
-            </Switch>
+        <Switch>
+            <Route path={`${path}/voyages`}> <VoyageList> </VoyageList>  </Route>
+            <Route path={`${path}/attenReservations`}> <ReservationList> </ReservationList></Route>
+            <Route path={`${path}/confirReservations`}> <ConfirmReservation></ConfirmReservation> </Route>
+            <Route path={`${path}/compte`}> <Compte> </Compte></Route>
+            <Route path={`${path}/createVoyage`}> <CreateVoyage></CreateVoyage></Route>
+            <Route path={`${path}/`}> <VoyageList></VoyageList>  </Route>
+        </Switch>
     </div>
     );
 }

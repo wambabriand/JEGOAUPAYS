@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import useAxios from 'axios-hooks';
 
-// const baseUrl = "http://localhost:80";
+ //const baseUrl = "http://localhost:8081";
 
-//const baseUrl = "http://192.168.43.222:8081";
+// const baseUrl = "http://192.168.43.222:8081";
 
 const baseUrl = "http://51.68.225.207:80";
 // pour la production il faut utiliser cette url 51.68.225.207
@@ -52,7 +52,6 @@ function doPost(url){
 );}
 const doPutWithAuth = (url, token) => {
     const token1 = localStorage.getItem('token');
-    console.log(token1);
     return useAxios( {
         url:baseUrl+url,
         method:'PUT',

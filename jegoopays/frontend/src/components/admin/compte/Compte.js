@@ -22,10 +22,9 @@ function reducer(state, action){
 }
 
 function Compte(){
-    const { token } = useAuthContext();
     const [compte, dispatcher] = useReducer(reducer,mycompte);
     const [journal, setJournal] =  useState(null);
-    const [{ loading, error },executePut] = doPutWithAuth("/api/jego/lock/admin/put/journal", token);
+    const [{ loading, error },executePut] = doPutWithAuth("/api/jego/lock/admin/put/journal");
     const {url, path} = useRouteMatch();
 
     function onUpdateJournal(){
@@ -34,7 +33,9 @@ function Compte(){
         }
         const formdata = new FormData();
         formdata.append('journal', journal,'journal.pdf');
-        executePut({data:formdata});
+        executePut({data:formdata})
+        .then(res=>alert(res.data.message))
+        .catch(err=>console.log(err));
     }
     if(loading) return (<p className='my-5 py-5'>Loading..........</p>);
     if(error){
